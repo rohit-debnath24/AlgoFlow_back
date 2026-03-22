@@ -1,0 +1,51 @@
+﻿
+> web@0.0.1 build D:\Projects\AlgoForge\apps\web
+> next build
+
+   Γû▓ Next.js 14.1.0
+
+   Creating an optimized production build ...
+node.exe : 
+At C:\Users\ROHIT\AppData\Roaming\npm\pnpm.ps1:24 char:5
++     & "node$exe"  "$basedir/node_modules/pnpm/bin/pnpm.cjs" $args
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteExcepti 
+   on
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+> Build error occurred
+SyntaxError: Unexpected token '∩╗┐', "∩╗┐{
+  "name"... is not valid JSON
+while determining default 'output.uniqueName' from 'name' in 
+D:\Projects\AlgoForge\apps\web\package.json
+    at JSON.parse (<anonymous>)
+    at D:\Projects\AlgoForge\node_modules\.pnpm\next@14.1.0_react-dom@18
+.2.0_react@18.2.0__react@18.2.0\node_modules\next\dist\compiled\webpack\
+bundle5.js:28:585200
+    at F (D:\Projects\AlgoForge\node_modules\.pnpm\next@14.1.0_react-dom
+@18.2.0_react@18.2.0__react@18.2.0\node_modules\next\dist\compiled\webpa
+ck\bundle5.js:28:576184)
+    at applyOutputDefaults (D:\Projects\AlgoForge\node_modules\.pnpm\nex
+t@14.1.0_react-dom@18.2.0_react@18.2.0__react@18.2.0\node_modules\next\d
+ist\compiled\webpack\bundle5.js:28:584871)
+    at applyWebpackOptionsDefaults (D:\Projects\AlgoForge\node_modules\.
+pnpm\next@14.1.0_react-dom@18.2.0_react@18.2.0__react@18.2.0\node_module
+s\next\dist\compiled\webpack\bundle5.js:28:577740)
+    at createCompiler (D:\Projects\AlgoForge\node_modules\.pnpm\next@14.
+1.0_react-dom@18.2.0_react@18.2.0__react@18.2.0\node_modules\next\dist\c
+ompiled\webpack\bundle5.js:28:1458066)
+    at create (D:\Projects\AlgoForge\node_modules\.pnpm\next@14.1.0_reac
+t-dom@18.2.0_react@18.2.0__react@18.2.0\node_modules\next\dist\compiled\
+webpack\bundle5.js:28:1458636)
+    at webpack (D:\Projects\AlgoForge\node_modules\.pnpm\next@14.1.0_rea
+ct-dom@18.2.0_react@18.2.0__react@18.2.0\node_modules\next\dist\compiled
+\webpack\bundle5.js:28:1458947)
+    at f (D:\Projects\AlgoForge\node_modules\.pnpm\next@14.1.0_react-dom
+@18.2.0_react@18.2.0__react@18.2.0\node_modules\next\dist\compiled\webpa
+ck\bundle5.js:28:888429)
+    at D:\Projects\AlgoForge\node_modules\.pnpm\next@14.1.0_react-dom@18
+.2.0_react@18.2.0__react@18.2.0\node_modules\next\dist\build\compiler.js
+:35:47 {
+  type: 'SyntaxError'
+}
+ΓÇëELIFECYCLEΓÇë Command failed with exit code 1.

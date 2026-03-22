@@ -1,0 +1,29 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Provider {
+  id             String         @id @default(uuid())
+  githubId       String         @unique
+  name           String
+  reputation     Int            @default(100)
+  nodes          ProviderNode[]
+  createdAt      DateTime       @default(now())
+}
+
+model ProviderNode {
+  id                  String   @id @default(uuid())
+  providerId          String
+  provider            Provider @relation(fields: [providerId], references: [id])
+  endpointUrl         String
+  status              String   @default("active") // active, inactive
+  cpuCoreCount        Int
+  ramGb               Int
+  bidRateMicroAlgos   Int
+  createdAt           DateTime @default(now())
+}

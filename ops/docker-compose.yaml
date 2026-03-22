@@ -1,0 +1,36 @@
+﻿version: "3.9"
+services:
+  ipfs:
+    image: ipfs/kubo:latest
+    restart: unless-stopped
+    environment:
+      - IPFS_PROFILE=server
+    ports:
+      - "4001:4001"
+      - "5001:5001"
+      - "8080:8080"
+    volumes:
+      - ipfs_data:/data/ipfs
+
+  node-executor:
+    build:
+      context: ..
+      dockerfile: services/node/Dockerfile
+    restart: unless-stopped
+    environment:
+      - PORT=3001
+      - IPFS_GATEWAY_URL=http://ipfs:8080/ipfs
+      - IPFS_API_URL=http://ipfs:5001/api/v0
+      - NODE_OPTIONS=--no-deprecation
+    ports:
+      - "3001:3001"
+    depends_on:
+      - ipfs
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512m
+
+volumes:
+  ipfs_data:

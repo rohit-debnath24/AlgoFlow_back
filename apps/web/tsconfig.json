@@ -1,0 +1,41 @@
+﻿{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowJs": true,
+    "noEmit": true,
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@algoforge/shared": [
+        "../../packages/shared/src"
+      ],
+      "@algoforge/wasm-tasks": [
+        "../../packages/wasm-tasks/src"
+      ]
+    },
+    "types": [
+      "@types/node"
+    ],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "incremental": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

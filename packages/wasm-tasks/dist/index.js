@@ -1,0 +1,1 @@
+export { loadAddWasm } from "./addWasm";

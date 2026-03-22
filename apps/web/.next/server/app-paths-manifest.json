@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+  "/marketplace/page": "app/marketplace/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/marketplace/register/page": "app/marketplace/register/page.js",
+  "/api/marketplace/nodes/route": "app/api/marketplace/nodes/route.js",
+  "/api/deploy/remote/route": "app/api/deploy/remote/route.js"
+}
